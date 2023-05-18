@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #121214;
+    --base-color: 194;
+
+    --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+    --primary-color: hsl(var(--base-color), 100%, 63%);
+
+    --text-color: #FFFFFF;
+
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+
+    line-height: 10.3rem;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+button svg {
+    height: 6rem;
+}
+
+.hide {
+    display: none;
+}
+
+.play svg path,
+.pause svg path,
+.sound-on svg path {
+    fill: var(--primary-color);
+}
+
+#timer {
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+
+    display: flex;
+    justify-content: center;
+}
+
+#controls {
+    background-color: var(--bg-primary-light);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    padding: 2.2rem 4rem;
+
+    height: 10rem;
+    width: clamp(10rem, 10rem + 30vw, 22.8rem);
+
+    border-radius: 9999px;
+}
+
+footer {
+    position: absolute;
+    right: 4rem;
+    bottom: 3.2rem;
+}
